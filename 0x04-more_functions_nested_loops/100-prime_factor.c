@@ -7,9 +7,11 @@
  *
  * Return: 0 (Success)
  */
+
 int main(void)
 {
 	unsigned long int x, n;
+
 	x = 612852475143;
 	n = 3;
 
