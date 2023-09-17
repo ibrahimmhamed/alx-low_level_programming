@@ -1,11 +1,11 @@
 #include"main.h"
 
 /**
- * numLength - returns the length of string.
+ * numLength - returns the length of string
  *
- * @num: operand number.
+ * @num: operand number
  *
- * Return: number of digits.
+ * Return: number of digits
 */
 
 int numLength(int num)
@@ -19,7 +19,8 @@ int numLength(int num)
 	{
 		num = num / 10;
 		length += 1;
-	{
+	}
+
 	return (length);
 }
 
@@ -62,5 +63,6 @@ int main(void)
 		else
 			printf("\n");
 	}
+
 	return (0);
 }
