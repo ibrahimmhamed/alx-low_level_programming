@@ -20,9 +20,9 @@ void print_diagonal(int n)
 			{
 				if (y > 1)
 					_putchar(' ');
+			}
 			_putchar(92);
 			_putchar('\n');
-			}
 		}
 	}
 }
