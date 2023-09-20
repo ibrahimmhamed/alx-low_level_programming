@@ -11,9 +11,10 @@
 
 int _strlen(char *s)
 {
-	char s[] = "My first strlen!";
+	int length = 0;
 
-	printf("%d\n", strlen(str));
+	while (s[length] != '\0')
+		length++;
 
-	return (0);
+	return (length);
 }
