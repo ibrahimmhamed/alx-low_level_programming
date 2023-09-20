@@ -11,11 +11,20 @@
 
 int _strlen(char *s)
 {
-	char *s[16] = "My first strlen!";
-	int len;
-
-	len = strlen(*s);
+	int len = strlen(s);
 	printf("%d\n", len);
+	return 0;
+}
 
-	return (0);
+/**
+ * main - Entry point
+ *
+ * Return: 0 (Success)
+*/
+
+int main()
+{
+    char str[16] = "My first strlen!";
+    _strlen(str);
+    return 0;
 }
