@@ -1,9 +1,9 @@
-#include "main.h"
+#include"main.h"
 
 /**
- * _puts - prints a string, followed by a new line.
+ * _puts - prints a string, followed by a newline.
  *
- * @str: an str parameter to print.
+ * @str: an string parameter to print.
 */
 
 void _puts(char *str)
