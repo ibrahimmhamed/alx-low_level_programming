@@ -4,18 +4,15 @@
 /**
  * _puts - prints a string, followed by a new line.
  *
- * @str: an str as parameter.
+ * @str: an str parameter to print.
 */
 
 void _puts(char *str)
 {
-	int x = 0;
-
-	while (str[x] != '\0')
+	while (*str != '\0')
 	{
-		_putchar(str[x]);
-		x++;
+		_putchar(*str);
+		str++;
 	}
 	_putchar('\n');
 }
-
