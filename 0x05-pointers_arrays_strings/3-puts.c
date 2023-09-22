@@ -5,8 +5,6 @@
  * _puts - prints a string, followed by a new line.
  *
  * @str: an str as parameter.
- *
- * Return: 0 (Success)
 */
 
 void _puts(char *str)
