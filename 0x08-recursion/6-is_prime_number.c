@@ -1,15 +1,14 @@
 #include "main.h"
 
 /**
- * is_prime_number - function that returns 1
- * if the input integer is aprime number.
+ * prime_check - check if a number is prime.
  *
- * @n: input integer.
+ * @n: the number to check.
  *
- * Return: 1 if the input is aprime number, othewise 0.
+ * Return: 1 if n is aprime number, 0 othewise.
 */
 
-int is_prime_number(int n)
+int prime_check(int n)
 {
 	if (n <= 1)
 	{
@@ -32,4 +31,18 @@ int is_prime_number(int n)
 	}
 
 	return (1);
+}
+
+/**
+ * is_prime_number - function that returns 1
+ * if the input integer is aprime number.
+ *
+ * @n: input integer.
+ *
+ * Return: 1 if n is aprime number, 0 othewise.
+*/
+
+int is_prime_number(int n)
+{
+	return prime_check(n);
 }
