@@ -1,24 +1,5 @@
 #include "main.h"
-
-/**
- * _strlen - fanction that calculate the length of a string.
- *
- * @s: string.
- *
- * Return: (length) of the string.
- */
-
-int _strlen(char *s)
-{
-	int length = 0;
-
-	while (s[length] != '\0')
-	{
-		length++;
-	}
-
-	return (length);
-}
+#include <string.h>
 
 /**
  * check_palindrome - check if a string is a palindrome or not.
@@ -54,7 +35,7 @@ int check_palindrome(char *s, int start, int end)
 
 int is_palindrome(char *s)
 {
-	int length = _strlen(s);
+	int length = strlen(s);
 
 	if (length <= 1)
 	{
