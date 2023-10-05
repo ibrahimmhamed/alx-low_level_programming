@@ -13,7 +13,8 @@
 
 int main(int argc, char *argv[])
 {
-	int *x, sum;
+	int sum;
+	char *x;
 
 	if (argc == 1)
 	{
