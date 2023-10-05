@@ -12,6 +12,9 @@
 
 char *str_concat(char *s1, char *s2)
 {
+	int x, y, z;
+	char *str;
+
 	if (s1 == NULL)
 	{
 		s1 = "";
@@ -20,9 +23,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-
-	int x, y, z;
-	char *str;
 
 	for (x = 0; s1[x] != '\0'; x++)
 		;
