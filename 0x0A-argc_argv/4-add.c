@@ -13,25 +13,25 @@
 
 int main(int argc, char *argv[])
 {
-	int num1, num2, sum;
+	int *x, sum;
 
-	if (argc < 3)
+	if (argc == 1)
 	{
 		printf("0\n");
 		return (0);
 	}
-
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
-
-	if (num1 == 0 || num2 == 0)
+	while (--argc)
 	{
-		printf("Error\n");
-		return (1);
+		for (x = argv[argc]; *x; x++)
+		{
+			if (*x < 48 || *x > 57)
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		sum += atoi(argv[argc]);
 	}
-
-	sum = num1 + num2;
-
 	printf("%d\n", sum);
 
 	return (0);
