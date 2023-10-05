@@ -4,9 +4,10 @@
 /**
  * **strtow - function that splits a string into words.
  *
- * @str:
+ * @str: pointer
  *
- * Return:
+ * Return: NULL if str == NULL or str == "",
+ * NULL if your function fails
 */
 
 char **strtow(char *str)
