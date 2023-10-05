@@ -37,14 +37,16 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	for (int i = 0; i < x; i++)
+	for (int i = 0; i <= z; i++)
 	{
-		str[i] = s1[i];
-	}
-
-	for (int i = 0; i < y; i++)
-	{
-		str[i + x] = s2[i];
+		if (i < x)
+		{
+			str[i] = s1[i];
+		}
+		else
+		{
+			str[i] = s2[i - x];
+		}
 	}
 	str[z] = '\0';
 
