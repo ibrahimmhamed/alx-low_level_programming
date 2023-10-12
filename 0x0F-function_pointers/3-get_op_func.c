@@ -20,9 +20,9 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
+	int x;
 
-	int x = 0;
-
+	x = 0;
 	while (x < 5)
 	{
 		if (*s == *ops[x].op)
