@@ -20,7 +20,6 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-
 	int x;
 
 	for (x = 0; x < 5; x++)
