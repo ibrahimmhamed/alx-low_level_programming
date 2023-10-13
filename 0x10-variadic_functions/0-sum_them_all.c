@@ -6,7 +6,7 @@
  * @separator: string
  * @n: num of integer
  *
- * Return:
+ * Return: 0 if n equal 0, otherwise sum
 */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -14,10 +14,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list ap;
 	int x, sum = 0;
 
-	va_start(ap, n);
-
 	if (n == 0)
 		return (0);
+
+	va_start(ap, n);
 
 	for (x = 0; x < n; x++)
 	{
