@@ -4,7 +4,7 @@
  * print_char - print a char
  *
  * @arg: a list of argument
-*/
+ */
 
 void print_char(va_list ap)
 {
@@ -17,7 +17,7 @@ void print_char(va_list ap)
  * print_int - print an integer
  *
  * @arg: a list of argument
-*/
+ */
 
 void print_int(va_list ap)
 {
@@ -30,7 +30,7 @@ void print_int(va_list ap)
  * print_float - print a float
  *
  * @arg: a list of argument
-*/
+ */
 
 void print_float(va_list ap)
 {
@@ -43,7 +43,7 @@ void print_float(va_list ap)
  * print_string - print a string
  *
  * @arg: a list of argument
-*/
+ */
 
 void print_string(va_list ap)
 {
@@ -61,32 +61,37 @@ void print_string(va_list ap)
  * print_all - a function that prints anything
  *
  * @format: string of character
-*/
+ */
 
 void print_all(const char * const format, ...)
 {
 	va_list ap;
 	int i = 0, j = 0;
 	char *separator = "";
+
 	print_t funcs[] = {
 		{"c", print_char},
-		{"i", print_int},
+		{"i", print_integer},
 		{"f", print_float},
 		{"s", print_string}
 	};
 
 	va_start(ap, format);
 
-	while (format && format[i])
+	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
-		while (j < 4 && (format[i] != *(funcs[j].symbol)))
-			j++;
-		if (j < 4)
+		while (j < 4)
 		{
-			printf("%s", separator);
-			funcs[j].print_t(ap);
-			separator = ", ";
+			if (*funcs[j].c == format[i])
+			{
+				printf("%s", separator);
+				funcs[j].f(ap);
+
+				separator = ", ";
+
+			}
+			j++;
 		}
 		i++;
 	}
