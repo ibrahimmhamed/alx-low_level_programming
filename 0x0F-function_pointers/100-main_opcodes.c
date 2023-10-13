@@ -29,9 +29,12 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
+	p = (char *)main
+
 	for (x = 0; x < num; x++)
 	{
-		printf("%02hhx", *((char *)main + x));
+		printf("%02hhx", p[x]);
+
 		if (x < num - 1)
 			printf(" ");
 		else
