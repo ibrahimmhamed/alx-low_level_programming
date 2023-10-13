@@ -13,7 +13,7 @@
 
 typedef struct print
 {
-	char *print;
+	char *c;
 	int (*f)(char *, va_list);
 } print_t;
 
