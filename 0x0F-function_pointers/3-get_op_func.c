@@ -11,7 +11,6 @@
 
 int (*get_op_func(char *s))(int, int)
 {
-	/* struct opts of struct op_t */
 	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
@@ -20,16 +19,16 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int x;
+	int i;
 
-	x = 0;
-	while (x < 5)
+	i = 0;
+	while (i < 5)
 	{
-		if (*s == *ops[x].op)
+		if (*s == *ops[i].op)
 		{
-			return (ops[x].f);
+			return (ops[i].f);
 		}
-		x++;
+		i++;
 	}
 
 	return (NULL);
