@@ -4,7 +4,7 @@
  * print_char - print a char
  *
  * @ap: a list of argument
- */
+*/
 
 void print_char(va_list ap)
 {
@@ -17,7 +17,7 @@ void print_char(va_list ap)
  * print_int - print an integer
  *
  * @ap: a list of argument
- */
+*/
 
 void print_int(va_list ap)
 {
@@ -30,7 +30,7 @@ void print_int(va_list ap)
  * print_float - print a float
  *
  * @ap: a list of argument
- */
+*/
 
 void print_float(va_list ap)
 {
@@ -43,7 +43,7 @@ void print_float(va_list ap)
  * print_string - print a string
  *
  * @ap: a list of argument
- */
+*/
 
 void print_string(va_list ap)
 {
@@ -61,7 +61,7 @@ void print_string(va_list ap)
  * print_all - a function that prints anything
  *
  * @format: string of character
- */
+*/
 
 void print_all(const char * const format, ...)
 {
@@ -87,9 +87,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", separator);
 				funcs[j].f(ap);
-
 				separator = ", ";
-
 			}
 			j++;
 		}
