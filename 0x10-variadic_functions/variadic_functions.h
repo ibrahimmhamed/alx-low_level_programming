@@ -14,7 +14,7 @@
 typedef struct print
 {
 	char *c;
-	int (*f)(char *, va_list);
+	int (*f)(char *, va_list ap);
 } print_t;
 
 

@@ -6,9 +6,9 @@
  * @arg: a list of argument
 */
 
-void print_char(va_list arg)
+void print_char(va_list ap)
 {
-	char c = va_arg(arg, int);
+	char c = va_arg(ap, int);
 
 	printf("%c", c);
 }
@@ -19,9 +19,9 @@ void print_char(va_list arg)
  * @arg: a list of argument
 */
 
-void print_int(va_list arg)
+void print_int(va_list ap)
 {
-	int n = va_arg(arg, int);
+	int n = va_arg(ap, int);
 
 	printf("%d", n);
 }
@@ -32,9 +32,9 @@ void print_int(va_list arg)
  * @arg: a list of argument
 */
 
-void print_float(va_list arg)
+void print_float(va_list ap)
 {
-	float n = va_arg(arg, double);
+	float n = va_arg(ap, double);
 
 	printf("%f", n);
 }
@@ -45,9 +45,9 @@ void print_float(va_list arg)
  * @arg: a list of argument
 */
 
-void print_string(va_list arg)
+void print_string(va_list ap)
 {
-	char *str = va_arg(arg, char *);
+	char *str = va_arg(ap, char *);
 
 	if (str == NULL)
 	{
@@ -68,7 +68,7 @@ void print_all(const char * const format, ...)
 	va_list ap;
 	int i = 0, j = 0;
 	char *separator = "";
-	func_printer funcs[] = {
+	print_t funcs[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
@@ -80,18 +80,12 @@ void print_all(const char * const format, ...)
 	while (format && format[i])
 	{
 		j = 0;
-		/**
-		 * 4 equals to the number of funcs present
-		 * so if j is less than four and our current
-		 * format is not equal to format in funcs
-		 * then j becomes j + 1
-		 */
 		while (j < 4 && (format[i] != *(funcs[j].symbol)))
 			j++;
 		if (j < 4)
 		{
 			printf("%s", separator);
-			funcs[j].print_func(ap);
+			funcs[j].print_t(ap);
 			separator = ", ";
 		}
 		i++;
