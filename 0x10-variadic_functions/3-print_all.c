@@ -34,7 +34,7 @@ void print_int(va_list ap)
 
 void print_float(va_list ap)
 {
-	float n = va_arg(ap, double);
+	double n = va_arg(ap, double);
 
 	printf("%f", n);
 }
