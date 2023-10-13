@@ -2,25 +2,28 @@
 
 /**
  * print_numbers - function that prints numbers, followed by a new line
+ *
  * @separator: string
  * @n: num of integer
- *
- * Return: 0 if n equal 0, otherwise sum
-*/
+ */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list ap;
-	int x, sum = 0;
+	unsigned int x;
 
 	va_start(ap, n);
 
 	for (x = 0; x < n; x++)
 	{
-		sum +=  va_arg(ap, int);
+		printf("%d", va_arg(ap, unsigned int));
+
+		if (separator != NULL && i != n - 1)
+		{
+			printf("%s", separator);
+		}
 	}
+	printf("\n");
 
 	va_end(ap);
-
-	return (sum);
 }
