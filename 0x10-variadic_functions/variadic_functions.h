@@ -14,7 +14,7 @@
 typedef struct print
 {
 	char *c;
-	int (*f)(va_list);
+	void (*f)(va_list);
 } print_t;
 
 int sum_them_all(const unsigned int n, ...);
